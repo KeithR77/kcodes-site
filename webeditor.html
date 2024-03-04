@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Code Editor - HTML/CSS/JS</title>
+    <!-- Custom Icons -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <!-- Custom Google Font 'Poppins Black 900' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Embedded Script File -->
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div class="bg-image">
+
+      <!-- Header Design -->
+      <header>
+          <a href="index" class="logo">K<span> - Codes</span></a>
+          <ul class="navlist">
+              <li><a href="index" class="active">Home</a></li>
+              <li><a href="about">About Me</a></li>
+              <li><a href="skills">Skills</a></li>
+              <li><a href="certifications">Certifications</a></li>
+              <li><a href="portfolio">Portfolio</a></li>
+              <li><a href="contact">Contact Me</a></li>
+          </ul>
+          <div class="bx bx-menu" id="menu-icon">
+          </div>
+      </header>
+
+      <!-- Live Code Editor -->
+    <div class="editor-container">
+        <div class="left-editor">
+            <label class="lang">
+                <lord-icon
+                    src="https://cdn.lordicon.com/kgwqxfas.json"
+                    trigger="loop"
+                    delay="2000"
+                    colors="primary:#ff003c,secondary:#5c0a33"
+                    style="width:35px;height:35px">
+                </lord-icon> HTML</label>
+            <textarea id="html-code" onkeyup="run()"></textarea>
+
+
+            <label class="lang">
+                <lord-icon
+                    src="https://cdn.lordicon.com/mbszmmcy.json"
+                    trigger="loop"
+                    delay="2000"
+                    colors="primary:#ff003c,secondary:#5c0a33"
+                    style="width:35px;height:35px">
+                </lord-icon> CSS</label>
+            <textarea id="css-code" onkeyup="run()"></textarea>
+
+
+            <label class="lang">
+                <lord-icon
+                    src="https://cdn.lordicon.com/sjmgcire.json"
+                    trigger="loop"
+                    delay="2000"
+                    colors="primary:#ff003c,secondary:#5c0a33"
+                    style="width:35px;height:35px">
+                </lord-icon> JavaScript</label>
+            <textarea id="js-code" onkeyup="run()"></textarea>
+        </div>
+        <div class="right-output">
+            <label class="lang">
+                <lord-icon
+                    src="https://cdn.lordicon.com/txuacdsz.json"
+                    trigger="loop"
+                    delay="2000"
+                    colors="primary:#ff003c,secondary:#5c0a33"
+                    style="width:35px;height:35px">
+                </lord-icon> Output:</label>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+  </div>
+
+  <!-- Script used for taking in HTML,CSS,JS code from user - and outputting result -->
+<script>
+    function run() {
+        //Store the values written in the HTML, CSS, JS, and Output text areas on the HTML/CSS/JS Live Code Editor Webpage
+        let htmlCode = document.getElementById("html-code").value;
+        let cssCode = document.getElementById("css-code").value;
+        let jsCode = document.getElementById("js-code").value;
+        let output = document.getElementById("output");
+
+        // Read any code written in the HTML window, and apply styling if CSS is used also.
+        output.contentDocument.body.innerHTML = htmlCode + "<style>" + cssCode + "</style>";
+        // Evalute any code written in the JavaScript window.
+        output.contentWindow.eval(jsCode);
+    }
+</script>
+
+</body>
+</html>

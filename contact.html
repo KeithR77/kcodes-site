@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KCodes - Contact</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="scripts.js"></script>
+    <!-- Custom Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdn.lordicon.com/lordicon-1.2.0.js"></script>
+    <!-- Custom Google Font 'Poppins Black 900' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap" rel="stylesheet">
+    <!-- Embedded Script File -->
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+<div class="bg-image">
+    <!-- Header Design -->
+    <header>
+        <a href="index" class="logo">K<span> - Codes</span></a>
+        <ul class="navlist">
+            <li><a href="index" class="active">Home</a></li>
+            <li><a href="about">About Me</a></li>
+            <li><a href="skills">Skills</a></li>
+            <li><a href="certifications">Certifications</a></li>
+            <li><a href="portfolio">Portfolio</a></li>
+            <li><a href="contact">Contact Me</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon">
+        </div>
+    </header>
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>
+                <span>Contact </span>Me!
+                <lord-icon class="contact-icon"
+                           src="https://cdn.lordicon.com/znmbqqqj.json"
+                           trigger="loop"
+                           delay="1500"
+                           colors="primary:#ff003c,secondary:#911051,tertiary:#ff003c,quaternary:#911051"
+                           style="width:50px;height:50px">
+                </lord-icon>
+            </h2>
+            <h4>If you have any questions or would like to reach out.</h4>
+            <p></p>
+            <div class="contact-icons">
+                <a href="tel:+5707721874"><i class='bx bx-phone-call'></i></a>
+                <a href="https://www.linkedin.com/in/keith-reis-754954184/"><i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form action="https://formsubmit.co/kcodeswebsite@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://kcodes.me">
+                <input name="Name" type="text" id="name" placeholder="Your Name" required>
+                <input name="Email" type="email" id="email" placeholder="Your Email Address" required>
+                <input name="Phone #" type="text" id="phone" placeholder="Your Phone Number" required>
+                <textarea name="Message" id="additional-info" cols="35" rows="10" placeholder="Information/Inquiries"></textarea>
+                <input type="submit" value="Submit" class="submit">
+            </form>
+        </div>
+    </section>
+</div>
+</body>
+</html>
